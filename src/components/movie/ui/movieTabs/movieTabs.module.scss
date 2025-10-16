@@ -1,0 +1,23 @@
+.movieTabs {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  position: absolute;
+  top: 10px;
+  left: 45%;
+  z-index: 5;
+}
+
+.tab {
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  color: #999999;
+  border-radius: 10px;
+}
+
+.active {
+  background-color: #63636367;
+  color: #fff;
+}

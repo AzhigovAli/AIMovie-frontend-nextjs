@@ -1,0 +1,1 @@
+export { MovieDetailsBlock } from './movieDetailsBlock';
