@@ -1,0 +1,18 @@
+.headerLoginButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  color: #999999;
+  cursor: pointer;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.loginTitle {
+  font-size: 14px;
+  font-weight: 400;
+}

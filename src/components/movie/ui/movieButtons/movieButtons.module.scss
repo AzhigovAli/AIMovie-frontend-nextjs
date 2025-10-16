@@ -1,0 +1,23 @@
+.movieButtons {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.watchButton {
+  background: linear-gradient(to right, #472c61, #8000ff);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 30px;
+}
+
+.trailerButton {
+  background: #262526;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 30px;
+}

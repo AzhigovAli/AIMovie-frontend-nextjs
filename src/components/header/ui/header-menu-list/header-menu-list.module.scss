@@ -1,0 +1,33 @@
+.headerMenuList {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+}
+
+.logo {
+  width: 180px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.menuList {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+}
+
+.menuItem {
+  font-weight: 500;
+  cursor: pointer;
+  color: #cfcfcf;
+  transition: color 0.2s ease;
+  &:hover {
+    color: #b78bfa;
+  }
+}
+
+.active {
+  color: #b78bfa;
+}

@@ -1,0 +1,24 @@
+.headerInputSearch {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 4px 10px;
+}
+
+.searchIcon {
+  color: #bdbdbd;
+  font-size: 20px;
+}
+
+.searchInput {
+  color: #fff;
+  font-size: 14px;
+  margin-left: 5px;
+  width: 160px;
+
+  &::placeholder {
+    color: #bdbdbd;
+  }
+}

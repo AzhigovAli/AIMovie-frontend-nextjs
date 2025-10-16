@@ -1,0 +1,15 @@
+.overlay {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.overlayButton {
+  background: linear-gradient(to right, #472c61, #8000ff);
+  border-radius: 10px;
+  color: white;
+
+  &:hover {
+    background: linear-gradient(to right, #5d3d7b, #9225ff);
+  }
+}

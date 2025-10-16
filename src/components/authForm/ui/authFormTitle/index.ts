@@ -1,0 +1,1 @@
+export { AuthFormTitle } from './authFormTitle';

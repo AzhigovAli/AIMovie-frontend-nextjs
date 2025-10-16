@@ -1,0 +1,18 @@
+.movieDescription {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 50%;
+  height: 96%;
+  padding: 30px 0 0 30px;
+  background-color: #000000;
+  position: relative;
+  z-index: 2;
+}
+
+.moviePlot {
+  max-width: 600px;
+  font-size: 22px;
+  font-weight: 500;
+  color: #fff;
+}

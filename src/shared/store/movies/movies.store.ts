@@ -1,0 +1,33 @@
+import { Movie } from '@/components/allTypesMovie/model/movies.type';
+import { create } from 'zustand';
+
+interface MovieStore {
+  movie: Movie;
+  aiMovie: Movie[];
+  movies: Movie[];
+  setMovies: (movies: Movie[]) => void;
+  setMovie: (movie: Movie) => void;
+  setAiMovie: (aiMovie: Movie[]) => void;
+}
+
+export const useMovieStore = create<MovieStore>((set) => ({
+  movie: {
+    id: 0,
+    title: '',
+    type: 'movie',
+    year: 0,
+    runtime: '',
+    director: '',
+    actors: [],
+    genres: [],
+    plot: '',
+    poster: '',
+    imdbRating: 0,
+    imdbID: '',
+  },
+  aiMovie: [],
+  movies: [],
+  setMovies: (movies) => set({ movies }),
+  setMovie: (movie: Movie) => set({ movie: movie }),
+  setAiMovie: (aiMovie) => set({ aiMovie }),
+}));

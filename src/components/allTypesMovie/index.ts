@@ -1,0 +1,1 @@
+export { AllTypesMovie } from './allTypesMovie';

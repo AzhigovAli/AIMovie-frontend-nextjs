@@ -1,0 +1,1 @@
+export { WatchMovie } from './movie';
