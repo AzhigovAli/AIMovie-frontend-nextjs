@@ -1,9 +1,11 @@
-import { Button, Stack, Typography } from '@mui/material';
+import { Stack, Typography } from '@mui/material';
 import { AllTypesMovieItemOverlayProps } from './model/allTypesMovieItemOverlay.types';
 import styles from './allTypesMovieItemOverlay.module.scss';
 import { useRouter } from 'next/navigation';
+import { FC } from 'react';
+import { CustomButton } from '@/shared/ui';
 
-export const AllTypesMovieItemOverlay = ({
+export const AllTypesMovieItemOverlay: FC<AllTypesMovieItemOverlayProps> = ({
   id,
   type,
   year,
@@ -12,7 +14,7 @@ export const AllTypesMovieItemOverlay = ({
   episodes,
   seasons,
   title,
-}: AllTypesMovieItemOverlayProps) => {
+}) => {
   const router = useRouter();
   const handleClickMovie = () => {
     router.push(`/${type}/${id}`);
@@ -37,9 +39,9 @@ export const AllTypesMovieItemOverlay = ({
         </Typography>
       </Stack>
 
-      <Button className={styles.overlayButton} onClick={handleClickMovie}>
+      <CustomButton className={styles.overlayButton} onClick={handleClickMovie}>
         Подробнее
-      </Button>
+      </CustomButton>
     </Stack>
   );
 };

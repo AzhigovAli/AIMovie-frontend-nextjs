@@ -5,7 +5,7 @@ import f1Banner from '@/assets/img/F1-banner.png';
 import { Movie } from '../allTypesMovie/model/movies.type';
 import { MovieDescriptionBlock } from './ui';
 import clsx from 'clsx';
-import { useMovieStore } from '@/shared/store/movies';
+import { useMovieStore } from '@/shared/store/movies.store';
 import { MovieTabs } from './ui/movieTabs/movieTabs';
 
 export const WatchMovie = ({ movie }: { movie: Movie }) => {

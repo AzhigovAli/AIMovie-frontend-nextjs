@@ -4,7 +4,7 @@ import React from 'react';
 import styles from './header-input-search.module.scss';
 import { Search } from '@mui/icons-material';
 import { Stack, InputBase } from '@mui/material';
-import { useHeaderStore } from '@/shared/store/header';
+import { useHeaderStore } from '@/shared/store/header.store';
 import { useSearchAI } from '../../model/header.hook';
 
 export const HeaderInputSearch = () => {

@@ -1,8 +1,12 @@
 import { axiosInstance } from '@/api/axios';
-import { useAuthStore } from '@/shared/store/auth';
+import { useAuthStore } from '@/shared/store/auth.store';
 import { useRouter } from 'next/navigation';
 import toast from 'react-hot-toast';
 
+/**
+ * Хук авторизации/регистрации
+ * @returns Функццию handleLogin
+ */
 export const useAuthForm = () => {
   const { email, fullName, password } = useAuthStore();
   const router = useRouter();
@@ -20,7 +24,6 @@ export const useAuthForm = () => {
         toast.success('Успешная авторизация');
         setTimeout(() => router.push('/'), 100);
       } else {
-        toast.error('Токен не получен');
         console.error('Нет токена в ответе сервера:', data);
       }
     } catch (error) {

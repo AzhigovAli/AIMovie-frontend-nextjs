@@ -1,9 +1,15 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React from 'react';
 import { axiosInstance } from '@/api/axios';
-import { useMovieStore } from '@/shared/store/movies';
+import { useMovieStore } from '@/shared/store/movies.store';
 
-export const useSearchAI = ({ search }: { search: string }) => {
+export interface SearchAIProps {
+  search: string;
+}
+
+/**
+ * Функция для получения фильмов с помощью OpenAI
+ */
+export const useSearchAI = ({ search }: SearchAIProps) => {
   const { setAiMovie } = useMovieStore();
 
   const getMovies = async () => {

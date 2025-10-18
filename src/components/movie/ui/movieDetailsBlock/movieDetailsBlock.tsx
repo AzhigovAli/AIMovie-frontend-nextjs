@@ -4,10 +4,12 @@ import { Stack, Typography } from '@mui/material';
 import styles from './movieDetailsBlock.module.scss';
 import { Movie } from '@/components/allTypesMovie/model/movies.type';
 
-export const MovieDetailsBlock: FC<{ isDetailsIndex: number; movie: Movie }> = ({
-  isDetailsIndex,
-  movie,
-}) => {
+export interface MovieDetailsBlockProps {
+  isDetailsIndex: number;
+  movie: Movie;
+}
+
+export const MovieDetailsBlock: FC<MovieDetailsBlockProps> = ({ isDetailsIndex, movie }) => {
   return (
     <Stack className={clsx(styles.movieDetailsBlock, { [styles.hidden]: isDetailsIndex === 0 })}>
       <Stack className={styles.movieActors}>

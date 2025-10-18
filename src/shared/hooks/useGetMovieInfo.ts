@@ -1,9 +1,8 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React from 'react';
 import { axiosInstance } from '@/api/axios';
-import { useMovieStore } from '../store/movies';
+import { useMovieStore } from '../store/movies.store';
 
-export const useGetMovieInfo = (id: number, type?: string) => {
+export const useGetMovieInfo = (id: number, type: string) => {
   const { movie, setMovie } = useMovieStore();
 
   const getMovie = async () => {
@@ -21,7 +20,7 @@ export const useGetMovieInfo = (id: number, type?: string) => {
 
   React.useEffect(() => {
     getMovie();
-  }, []);
+  }, [movie]);
 
   return { movie };
 };

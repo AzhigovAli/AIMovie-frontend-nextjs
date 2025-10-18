@@ -4,8 +4,9 @@ import styles from './allTypesMovieItem.module.scss';
 import { Movie } from '../../model/movies.type';
 import { AllTypesMovieItemOverlay } from '../allTypesMovieItemOverlay';
 import clsx from 'clsx';
+import { FC } from 'react';
 
-export const AllTypesMovieItem = ({
+export const AllTypesMovieItem: FC<Movie> = ({
   id,
   imdbRating,
   poster,
@@ -16,7 +17,7 @@ export const AllTypesMovieItem = ({
   runtime,
   seasons,
   episodes,
-}: Movie) => {
+}) => {
   return (
     <Stack className={styles.movieItem} key={id}>
       <Stack

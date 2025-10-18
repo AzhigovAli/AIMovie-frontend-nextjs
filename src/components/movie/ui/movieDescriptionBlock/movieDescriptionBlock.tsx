@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import Image from 'next/image';
 import { Stack } from '@mui/material';
 import { MovieInfo } from '../movieInfo';
@@ -9,14 +9,16 @@ import { Movie } from '@/components/allTypesMovie/model/movies.type';
 import clsx from 'clsx';
 import { MovieDetailsBlock } from '../movieDetailsBlock';
 
-export const MovieDescriptionBlock = ({
-  plot,
-  movie,
-  isDetailsIndex,
-}: {
+export interface MovieDescriptionBlockProps {
   plot: string;
   movie: Movie;
   isDetailsIndex: number;
+}
+
+export const MovieDescriptionBlock: FC<MovieDescriptionBlockProps> = ({
+  plot,
+  movie,
+  isDetailsIndex,
 }) => {
   return (
     <Stack className={clsx(styles.movieDescription, { [styles.full]: isDetailsIndex === 1 })}>

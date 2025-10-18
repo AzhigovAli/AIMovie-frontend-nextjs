@@ -1,18 +1,24 @@
 'use client';
 
-import React from 'react';
+import React, { FC } from 'react';
 import styles from './allTypesMovie.module.scss';
 import { Stack } from '@mui/material';
 import { useGetMovies } from './model/movies.hook';
 import { AllTypesMovieItem } from './ui';
 import { Movie } from './model/movies.type';
 
-export const AllTypesMovie = ({ type }: { type?: string }) => {
+export interface AllTypesMovieProps {
+  /**  Тип фильма */
+  type?: string;
+}
+
+export const AllTypesMovie: FC<AllTypesMovieProps> = ({ type }) => {
   const { movies, aiMovie } = useGetMovies({ type });
+  const isAiMovie = aiMovie.length ? aiMovie : movies;
 
   return (
     <Stack className={styles.moviesList}>
-      {(aiMovie.length ? aiMovie : movies).map((item: Movie) => (
+      {isAiMovie.map((item: Movie) => (
         <Stack key={item.id}>
           <AllTypesMovieItem
             id={item.id}

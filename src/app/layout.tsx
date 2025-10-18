@@ -5,6 +5,7 @@ import createCache from '@emotion/cache';
 import { CacheProvider } from '@emotion/react';
 import '../global.css';
 import { usePathname } from 'next/navigation';
+import clsx from 'clsx';
 
 const muiCache = createCache({
   key: 'mui',
@@ -22,13 +23,9 @@ export default function RootLayout({
     <html lang="en">
       <CacheProvider value={muiCache}>
         <body
-          style={{
-            background:
-              pathname === '/auth'
-                ? "url('/authBackground.jpg') no-repeat center center fixed"
-                : '',
-            backgroundSize: pathname === '/auth' ? 'cover' : '',
-          }}>
+          className={clsx({
+            ['authPage']: pathname === '/auth',
+          })}>
           {pathname !== '/auth' && <Header />}
           {children}
         </body>

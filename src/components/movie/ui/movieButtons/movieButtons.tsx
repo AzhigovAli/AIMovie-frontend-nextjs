@@ -2,8 +2,9 @@
 
 import React from 'react';
 import styles from './movieButtons.module.scss';
-import { Stack, Button } from '@mui/material';
+import { Stack } from '@mui/material';
 import { useRouter } from 'next/navigation';
+import { CustomButton } from '@/shared/ui';
 
 export const MovieButtons = () => {
   const router = useRouter();
@@ -18,12 +19,12 @@ export const MovieButtons = () => {
 
   return (
     <Stack className={styles.movieButtons}>
-      <Button className={styles.watchButton} onClick={handleWatchClick}>
+      <CustomButton className={styles.watchButton} onClick={handleWatchClick}>
         Смотреть сейчас
-      </Button>
-      <Button className={styles.trailerButton} onClick={handleWatchClick}>
+      </CustomButton>
+      <CustomButton className={styles.trailerButton} onClick={handleWatchClick}>
         Трейлер
-      </Button>
+      </CustomButton>
     </Stack>
   );
 };

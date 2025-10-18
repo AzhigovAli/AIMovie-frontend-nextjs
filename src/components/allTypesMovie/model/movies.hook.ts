@@ -1,9 +1,14 @@
 import { axiosInstance } from '@/api/axios';
-import { useMovieStore } from '@/shared/store/movies';
+import { useMovieStore } from '@/shared/store/movies.store';
 import React from 'react';
 import { Movie } from './movies.type';
 
-export const useGetMovies = ({ type }: { type?: string }) => {
+export interface GetMoviesProps {
+  /** Тип фильма */
+  type?: string;
+}
+
+export const useGetMovies = ({ type }: GetMoviesProps) => {
   const { movies, setMovies, aiMovie } = useMovieStore();
 
   React.useEffect(() => {

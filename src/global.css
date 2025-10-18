@@ -9,6 +9,11 @@ body {
   margin: 0;
 }
 
+.authPage {
+  background: url('/authBackground.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
 .wrapper {
   margin: 0 50px;
 }

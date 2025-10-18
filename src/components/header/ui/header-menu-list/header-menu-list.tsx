@@ -12,8 +12,6 @@ export const HeaderMenuList = () => {
   const pathname = usePathname();
   const router = useRouter();
 
-  console.log(pathname);
-
   return (
     <Stack className={styles.headerMenuList}>
       <Image className={styles.logo} onClick={() => router.push('/')} src={logo} alt="AI Movie" />
